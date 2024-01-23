@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+
+
+/* footer {
+    background-color: #495E57;
+    color: #fff;
+    padding: 10px;
+} */
+
+.main-formcontainer {
+    display: flex;
+    justify-content: center;
+    /* background-color: #45474B;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    height: 450px; */
+    margin: 50px 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    background-color: #cfcdc6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 10px 10px 10px 10px rgba(20, 19, 19, 0.1);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.btnsubmit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btnsubmit {
+    background-color: #111111;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.btnsubmit:hover,.btnAddStudent {
+    background-color: #0056b3;
+}
+
+.forgotPass-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.forgotPass {
+    color: #0c0c0c;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+}
+
+
+
+

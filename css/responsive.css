@@ -1,0 +1,114 @@
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+
+  .sub-container {
+    margin-right: 0;
+    margin-left: -8%;
+    width: 108%;
+  }
+  .semester-text {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 0;
+
+    margin-left: 3% !important;
+  }
+  .School-name {
+    font-size: 12px;
+  }
+
+  .head1 .imgs {
+    width: 60px;
+  }
+
+  .mainshow {
+    height: 30%;
+    width: 85%;
+    margin-left: 12%;
+    margin-right: 0;
+  }
+
+  .icons{
+    width: 25%;
+  }
+
+  .Student-info {
+    font-size: 22px;
+    margin-bottom: 0px;
+    padding: 15px 15px 7px 15px;
+  }
+  .imgs {
+    width: 60px;
+  }
+  .profile {
+    margin-top: 0;
+    padding: 7px 15px 22px 15px;
+  }
+  table {
+    font-size: 12px;
+    padding: 20px 20px 10px 25px;
+  }
+
+  .sub-profile {
+    margin-top: 5%;
+  }
+  #clock,
+  #date {
+    font-size: 10px;
+  }
+
+  .table-fixed {
+    width: 422px;
+    margin-top: 0;
+    margin-left: -5%;
+  }
+
+  .w-11\/12 {
+    width: 110%;
+    margin-left: -5%;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .relative {
+    margin-left: 1%;
+    margin-right: 20%;
+    margin-top: 50px;
+  }
+  .main-menu {
+    width: 35px;
+  }
+  .ul-sidebar li a {
+    margin-right: 20%;
+    margin-left: -15px;
+  }
+  .print-button {
+      width: 20%;
+      font-size: 8px;
+    }
+
+    .sub-profiles {
+      width: 80%;
+      margin-top: 13%;
+      margin-left: 14%;
+      margin-right: 0;
+    }
+    .cardStyle {
+        width: 400px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    .head2 .css{
+        font-size: 7px;
+    }
+
+    .head2 .school-add {
+        font-size: 4px;
+    }
+
+   
+  }

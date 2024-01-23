@@ -1,0 +1,67 @@
+.index-body
+{
+    background-color: rgb(212, 214, 214);
+}
+.bg-light-blue {
+    background-color: rgb(225, 227, 228);
+}
+.linear-section
+{
+
+}
+.gradient-custom-2:hover
+{
+    background-color:rgb(12, 12, 105);
+}
+.image-logo
+{
+    width: 320px;
+    max-width:100%;
+    height: auto;
+    object-fit:contain;
+    mix-blend-mode: multiply;
+}
+.gradient-custom-2 {
+    padding:5px;
+    background: rgb(22, 41, 183);
+    background: linear-gradient(180deg, rgb(28, 232, 86) 15%, rgb(72, 69, 69) 95%);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+
+/* CSS for desktop devices */
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+/* CSS for tablet devices */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* CSS for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .sub-container{
+        margin-right: 5px;
+    }
+    .head1 .imgs{
+        width: 60px;
+    }
+}

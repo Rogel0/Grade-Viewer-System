@@ -1,0 +1,56 @@
+.sub-profiles {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.sub-profiles h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sub-profiles label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sub-profiles input[type="text"],
+.sub-profiles input[type="number"],
+.sub-profiles input[type="email"],
+.sub-profiles select,
+.sub-profiles textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.sub-profiles button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sub-profiles button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
