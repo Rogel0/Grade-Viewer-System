@@ -36,27 +36,55 @@ if (isset($_SESSION['error'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style2.css">
-    
+
 </head>
 
 <body>
-    <div class="container">
-        <?php include("./AdminComponents/AdminHeader.php") ?>
 
+    <div class="container">
+
+        <?php include("./AdminComponents/AdminHeader.php") ?>
+        <!-- <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 0; margin-top: 2%;">
+            <div>
+                <input type="checkbox" class="gradingCheckbox" id="first_quarter_checkbox" name="grading" value="1st" style="margin-right: 5px;">
+                <label for="first_quarter_grade" style="font-size: 14px;">1st Grading</label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="gradingCheckbox" id="second_quarter_checkbox" name="grading" value="2nd" style="margin-right: 5px;">
+                <label for="2ndGrading" style="font-size: 14px;">2nd Grading</label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="gradingCheckbox" id="third_quarter_checkbox" name="grading" value="3rd" style="margin-right: 5px;">
+                <label for="3rdGrading" style="font-size: 14px;">3rd Grading</label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="gradingCheckbox" id="fourth_quarter_checkbox" name="grading" value="4th" style="margin-right: 5px;">
+                <label for="4thGrading" style="font-size: 14px;">4th Grading</label>
+            </div>
+        </div> -->
+        
         <?php include("./AdminComponents/AdminSidebar.php") ?>
 
         <?php include("./AdminComponents/AdminTime.php") ?>
 
-        
+
     </div>
 
-    <?php include("./AdminComponents/Admin_AddStudent.php") ?> 
+    <?php include("./AdminComponents/Admin_AddStudent.php") ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./javascript/checkbox_state.js"></script>
     <script src="./javascript/Script.js"></script>
     <script src="./javascript/bar_search.js"></script>
+    <!-- <script src="./javascript/quarter_controller.js"></script> -->
+   
+
+
 </body>
 
 </html>

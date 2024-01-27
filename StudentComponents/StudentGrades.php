@@ -43,7 +43,7 @@ if (count($secondSemesterGrades) > 0) {
 
 <?php
 // Fetch student's name
-$sql = "SELECT firstname, lastname, student_course, year_level, school_year, student_section FROM student_info WHERE student_id = ?";
+$sql = "SELECT firstname, lastname, student_course,LRN, year_level, school_year, student_section FROM student_info WHERE student_id = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "i", $userId);
 mysqli_stmt_execute($stmt);
@@ -57,6 +57,21 @@ $studentYearLevel = $student['year_level'];
 ?>
 
 <!-- First semester grades -->
+
+<div style="display: flex; justify-content: space-between;">
+                <div style="margin-left: 20%; margin-top: 2%; margin-bottom: 4%;">
+                    <p style="margin: 0; "><strong>Name:</strong> <?php echo $student['firstname'] . ' ' . $student['lastname']; ?></p>
+                    <br>
+                    <p style="margin: 0;"><strong>Section:</strong> <?php echo $student['student_section']; ?></p>
+                </div>
+
+                <div style="margin-right: 25%; margin-top: 2%; margin-bottom: 4%;">
+                    <p style="margin: 0; "><strong>LRN:</strong> <?php echo $student['LRN']; ?></p>
+                    <br>
+                    <p style="margin: 0;"><strong>Year Level:</strong> <?php echo $student['year_level']; ?></p>
+                </div>
+               
+            </div>
 
 <div class="w-11/12 text-base student-grid" style="margin-bottom: 120px; margin-top: 0; margin-left: 40px;">
 
@@ -93,7 +108,7 @@ $studentYearLevel = $student['year_level'];
                 <?php endforeach; ?>
                 <tr style="background-color: #FF6868; color: black;">
                     <td colspan="3" style="color:#F2F1EB; text-align: right;">General Average</td>
-                    <td style="font-weight: 600;"><?php echo $firstSemesterFinalGrade; ?></td>
+                    <td style="font-weight: 600;"><?php echo number_format($firstSemesterFinalGrade, 2); ?></td>
                 </tr>
             </tbody>
         </table>
@@ -130,7 +145,7 @@ $studentYearLevel = $student['year_level'];
                 <?php endforeach; ?>
                 <tr style="background-color: #FF6868; color: black;">
                     <td colspan="3" style="color:#F2F1EB;  text-align: right;">General Average</td>
-                    <td style="font-weight: 600;"><?php echo $secondSemesterFinalGrade; ?></td>
+                    <td style="font-weight: 600;"><?php echo number_format($secondSemesterFinalGrade, 2); ?></td>
                 </tr>
             </tbody>
         </table>

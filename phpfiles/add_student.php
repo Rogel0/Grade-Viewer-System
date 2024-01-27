@@ -9,6 +9,7 @@ if (isset($_POST['btnadd_student'])) {
     }
 
     $studentNo = $_POST['student_no'];
+    $LRN = $_POST['LRN'];
     $lastName = $_POST['last_name'];
     $firstName = $_POST['first_name'];
     $middleName = $_POST['middle_name'];
@@ -28,10 +29,10 @@ if (isset($_POST['btnadd_student'])) {
 
 
     $insertQuery = "INSERT INTO student_info (
-    student_no, lastname, firstname, middlename, gender, date_of_birth, address,
+    student_no, LRN, lastname, firstname, middlename, gender, date_of_birth, address,
     contact_number, parent_name, permanent_address, student_course, year_level, school_year,student_section, username, password, user_type
 ) VALUES (
-    '$studentNo', '$lastName', '$firstName', '$middleName', '$gender', '$dateOfBirth',
+    '$studentNo', '$LRN', '$lastName', '$firstName', '$middleName', '$gender', '$dateOfBirth',
     '$address', '$contactNumber', '$parentName', '$permanentAddress',
     '$studentsCourse', '$yearLevel', '$schoolYear','$studentSection', '$username', '$password', '$userType'
 )";

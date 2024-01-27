@@ -10,6 +10,9 @@
                     <label for="student_no">Student No:</label>
                     <input type="text" name="student_no" required><br>
 
+                    <label for="student_no">LRN:</label>
+                    <input type="text" name="LRN" required maxlength="12" title="The maximum number of characters is 12"><br>
+
                     <label for="last_name">Last Name:</label>
                     <input type="text" name="last_name" required><br>
 

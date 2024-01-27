@@ -1,10 +1,7 @@
 <?php
-
-
-
 include('./phpfiles/connection.php');
 
-$query = "SELECT student_no,student_id, CONCAT(firstname, ' ', lastname) AS student_name, student_course, year_level, student_section, school_year, gender, date_of_birth, address, contact_number, parent_name, permanent_address FROM student_info";
+$query = "SELECT student_no, LRN,student_id, CONCAT(firstname, ' ', lastname) AS student_name, student_course, year_level, student_section, school_year, gender, date_of_birth, address, contact_number, parent_name, permanent_address FROM student_info";
 $result = mysqli_query($conn, $query);
 
 if ($result) {
@@ -49,7 +46,7 @@ if (isset($_SESSION['success'])) {
         <a href="./phpfiles/logout.php" style="margin-left: auto; margin-right: 10px; color: white;">Logout</a>
     </div>
 </header> -->
-
+    
     <?php include('./modals/filterbuttons.php') ?>
     <?php include('./modals/addstudent_modal.php') ?>
 
@@ -57,7 +54,7 @@ if (isset($_SESSION['success'])) {
     <table class="table">
         <thead class="table-dark">
             <tr>
-                <th scope="col">Student No</th>
+                <th scope="col">LRN</th>
                 <th scope="col">Student Name</th>
                 <th scope="col">Course</th>
                 <th scope="col">Year</th>
@@ -69,7 +66,7 @@ if (isset($_SESSION['success'])) {
         <tbody>
             <?php foreach ($rows as $row) : ?>
                 <tr>
-                    <td><?php echo $row['student_no']; ?></td>
+                    <td><?php echo $row['LRN']; ?></td>
                     <td><?php echo $row['student_name']; ?></td>
                     <td><?php echo $row['student_course']; ?></td>
                     <td><?php echo $row['year_level']; ?></td>
@@ -114,6 +111,7 @@ if (isset($_SESSION['success'])) {
 <!-- <script src="./javascript/plus_sign.js"></script>
 <script src="./javascript/succesfullmessagetime.js"></script> -->
 <script src="./javascript/sessionmessage.js"></script>
+<script src="./javascript/changepassmessage.js"></script>
     
 </body>
 

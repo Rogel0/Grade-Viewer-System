@@ -1,5 +1,10 @@
-
-
+<?php
+include('./phpfiles/connection.php');
+$student_id = $row['student_id'];
+$query = "SELECT firstname, lastname, student_section,LRN, year_level FROM student_info WHERE student_id = $student_id";
+$result = mysqli_query($conn, $query);
+$student = mysqli_fetch_assoc($result);
+?>
 
 <!-- The modal -->
 <div class="modal fade" id="gradesModal<?php echo $row['student_id']; ?>" tabindex="-1" aria-labelledby="gradesModalLabel" aria-hidden="true">
@@ -9,9 +14,23 @@
                 <h5 class="modal-title" id="viewModalLabel<?php echo $row['student_id']; ?>">Student Grades</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <button onclick="printGrades()" class="print-button" style="float:inline-end; margin-bottom: 1%; margin-right: 1%;">
-        <i class="fa fa-print"></i> Print Grades
-</button>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="margin-left: 8%; margin-top: 4%;">
+                    <p style="margin: 0; "><strong>Name:</strong> <?php echo $student['firstname'] . ' ' . $student['lastname']; ?></p>
+                    <br>
+                    <p style="margin: 0;"><strong>Section:</strong> <?php echo $student['student_section']; ?></p>
+                </div>
+
+                <div style="margin-right: 8%; margin-top: 4%;">
+                    <p style="margin: 0; "><strong>LRN:</strong> <?php echo $student['LRN']; ?></p>
+                    <br>
+                    <p style="margin: 0;"><strong>Year Level:</strong> <?php echo $student['year_level']; ?></p>
+                </div>
+               
+            </div>
+            <!-- <button onclick="printGrades()" class="print-button" style="float:inline-end; margin-bottom: 1%; margin-right: 1%;">
+                <i class="fa fa-print"></i> Print Grades
+            </button> -->
             <div class="modal-body">
                 <h5><strong>First Semester</strong></h5>
                 <table class="tables">
@@ -26,7 +45,7 @@
                     <tbody class="tbodys" id="firstSemesterGrades">
                         <!-- Grades will be inserted here -->
                         <?php
-                     
+
                         // Fetch the grades for the first semester
                         $query = "SELECT id, subject_name, first_quarter_grade, second_quarter_grade FROM grades WHERE student_id = ? AND semester = 1";
                         $stmt = $conn->prepare($query);
@@ -34,7 +53,7 @@
                         $stmt->execute();
                         $result = $stmt->get_result();
 
-                        
+
 
                         // Loop through the grades and display them
                         while ($grade = $result->fetch_assoc()) {
@@ -74,9 +93,10 @@
                         $stmt->execute();
                         $result = $stmt->get_result();
 
+
                         // Loop through the grades and display them
                         while ($grade = $result->fetch_assoc()) {
-                            echo '<tr class="trs">';
+                            echo '<tr class="trs" style="display: table-row">';
                             echo '<td class="tds">' . $grade['subject_name'] . '</td>';
                             echo '<td class="tds">' . $grade['third_quarter_grade'] . '</td>';
                             echo '<td class="tds">' . $grade['fourth_quarter_grade'] . '</td>';
